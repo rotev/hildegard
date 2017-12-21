@@ -6,15 +6,25 @@ import './vrScene.styl';
 
 const VRScene = () => (
   <Scene>
-    <Entity position={{ x: 0, y: -1, z: 1 }}>
-      <a-camera>
-        <a-entity
-          position="0 0 -1"
-          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-          material="color: white; shader: flat"
+    <Entity primitive="a-camera">
+      <Entity
+        primitive="a-cursor"
+        cursor={{ fuse: true, fuseTimeout: 100 }}
+        geometry={{ primitive: 'ring' }}
+        material={{ color: 'white', shader: 'flat' }}
+      >
+        <a-animation
+          begin="click"
+          easing="ease-in"
+          attribute="scale"
+          dur="150"
+          fill="forwards"
+          from="0.1 0.1 0.1"
+          to="1 1 1"
         />
-      </a-camera>
+      </Entity>
     </Entity>
+
     <Entity geometry={{ primitive: 'box' }} material={{ color: '#66296b' }} position={{ x: 0, y: 0, z: -5 }} />
     <Entity particle-system={{ preset: 'snow' }} />
     <Entity light={{ type: 'point' }} />
