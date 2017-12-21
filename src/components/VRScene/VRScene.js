@@ -6,10 +6,11 @@ import './vrScene.styl';
 
 const VRScene = () => (
   <Scene>
-    <Entity primitive="a-camera">
+    <Entity primitive="a-camera" position={{ x: 0, y: -1, z: 1 }}>
       <Entity
         primitive="a-cursor"
         cursor={{ fuse: true, fuseTimeout: 100 }}
+        raycaster={{ objects: '.clickable' }}
         geometry={{ primitive: 'ring' }}
         material={{ color: 'white', shader: 'flat' }}
       >
@@ -25,7 +26,7 @@ const VRScene = () => (
       </Entity>
     </Entity>
 
-    <Entity geometry={{ primitive: 'box' }} material={{ color: '#66296b' }} position={{ x: 0, y: 0, z: -5 }} />
+    <Entity geometry={{ primitive: 'box' }} material={{ color: '#66296b' }} position={{ x: 0, y: 0, z: -5 }} class="clickable" />
     <Entity particle-system={{ preset: 'snow' }} />
     <Entity light={{ type: 'point' }} />
     <Entity text={{ value: 'Hello, WebVR!' }} position={{ x: 0, y: 1, z: 0 }} />
