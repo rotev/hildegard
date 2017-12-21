@@ -4,6 +4,7 @@
   "description": "Having fun with aframe and react",
   "main": "src/index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/** --fix",
     "build": "webpack",
     "start": "webpack-dev-server --host 0.0.0.0 --port=3000",
     "build:dev": "webpack --env=dev --progress --profile --colors",
@@ -19,15 +20,21 @@
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.7",
+    "eslint": "4.13.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.5.1",
     "file-loader": "1.1.6",
     "html-webpack-plugin": "2.30.1",
     "jest": "22.0.3",
-    "redux-devtools-extension": "2.13.2",
     "style-loader": "0.19.1",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
+    "aframe": "0.7.1",
+    "aframe-react": "4.3.0",
     "lodash": "4.17.4",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -36,7 +43,8 @@
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2",
     "redux": "3.7.2",
-    "redux-actions": "^2.2.1",
-    "reselect": "^3.0.1"
+    "redux-actions": "2.2.1",
+    "redux-devtools-extension": "2.13.2",
+    "reselect": "3.0.1"
   }
 }
