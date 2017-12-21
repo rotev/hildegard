@@ -40,14 +40,15 @@ module.exports = {
   },
   module: {
     rules: [
-     { 
-       test: /\.css$/, use: ['style-loader', 'css-loader'], 
-       include: /flexboxgrid/
-       //Follow instructions at https://github.com/roylee0704/react-flexbox-grid
-     },
+      {
+        test: /\.styl$/, use: ['style-loader', 'css-loader', 'stylus-loader'],
+      },
+      {
+        test: /\.css$/, use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.js|.jsx?$/,
