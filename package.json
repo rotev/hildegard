@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "aframe": "0.7.1",
+    "aframe-particle-system-component": "^1.0.11",
     "aframe-react": "4.3.0",
     "lodash": "4.17.4",
     "react": "16.2.0",
