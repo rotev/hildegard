@@ -2,12 +2,12 @@
   "name": "hildegard",
   "version": "1.0.0",
   "description": "Having fun with aframe and react",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "webpack--config=config/webpack.config.js ",
-    "start": "webpack-dev-server --config=config/webpack.config.js --host 0.0.0.0 --port=3000",
-    "build:dev": "webpack --config=config/webpack.config.js --env=dev --progress --profile --colors",
-    "build:dist": "webpack --config=config/webpack.prod.js --env=prod --progress --profile --colors",
+    "build": "webpack",
+    "start": "webpack-dev-server --host 0.0.0.0 --port=3000",
+    "build:dev": "webpack --env=dev --progress --profile --colors",
+    "build:dist": "webpack --env=prod --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rotem Harel",
