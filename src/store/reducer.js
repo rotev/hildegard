@@ -1,5 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { combineReducers } from 'redux';
+import boxes from '../domains/boxes/reducer';
 
-export default handleActions({
-
-});
+export default combineReducers({ boxes });

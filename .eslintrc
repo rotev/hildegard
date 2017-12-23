@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
-    "react/jsx-filename-extension": true
+    "react/jsx-filename-extension": true,
+    "import/prefer-default-export": false
   }
 }
