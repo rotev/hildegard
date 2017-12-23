@@ -9,6 +9,7 @@ module.exports = {
     // root: path.join(__dirname, 'src'),
     alias: {
       domains: path.resolve(__dirname, 'src/domains'),
+      components: path.resolve(__dirname, 'src/components'),
     },
   },
   // Content
