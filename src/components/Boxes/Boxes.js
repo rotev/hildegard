@@ -7,14 +7,16 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import './boxes.styl';
 
 class Boxes extends React.Component {
-  renderBox = () => {
+  renderBox = (box, index) => {
     const { onClick } = this.props;
+    const x = (index * 2) - 4;
 
     return (
       <Entity
+        key={index}
         geometry={{ primitive: 'box' }}
-        material={{ color: '#66296b' }}
-        position={{ x: 0, y: 0, z: -5 }}
+        material={{ color: box.color, opacity: box.opacity }}
+        position={{ x, y: 0, z: -5 }}
         class="clickable"
         events={{ click: onClick }}
       />
