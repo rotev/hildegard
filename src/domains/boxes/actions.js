@@ -1,9 +1,9 @@
 import { createActions } from 'redux-actions';
 
-const {
+export const {
   insertBox,
+  clickBox,
 } = createActions({
   INSERT_BOX: color => ({ color }),
+  CLICK_BOX: index => ({ index }),
 });
-
-export default { insertBox };

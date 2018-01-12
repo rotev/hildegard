@@ -18,7 +18,7 @@ class Boxes extends React.Component {
         material={{ color: box.color, opacity: box.opacity }}
         position={{ x, y: 0, z: -5 }}
         class="clickable"
-        events={{ click: onClick }}
+        events={{ click: () => onClick(index) }}
       />
     );
   }
